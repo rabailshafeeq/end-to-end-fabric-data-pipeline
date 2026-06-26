@@ -1,70 +1,139 @@
-# Microsoft-Fabric-Data-Engineering-Project - World Wide Earthquakes
+# 🌍 End-to-End Microsoft Fabric Data Engineering Project
 
-<img src="Images\End to End Process Diagram.png" >
+<img src="Images/End to End Process Diagram.png" alt="Microsoft Fabric Data Engineering Architecture" width="100%">
 
+## Overview
 
-## Project Overview
-This project demonstrates a structured data pipeline implemented in Microsoft Fabric to process raw data ingested from the USGS API. The data is transformed across three layers—Bronze, Silver, and Gold—before being visualized in a Power BI report. The pipeline ensures that the data is cleaned, transformed, and optimized for reporting, offering a scalable and efficient way to work with large datasets.
+This project demonstrates a complete **end-to-end data engineering solution** built with **Microsoft Fabric**. The pipeline ingests real-time earthquake data from the USGS API, processes it through a **Medallion Architecture (Bronze → Silver → Gold)**, and delivers business-ready insights using an interactive **Power BI Dashboard**.
 
-Ingesting Earthquake events data from [usgs](https://earthquake.usgs.gov/fdsnws/event/1/#parameters).
+The solution showcases enterprise-grade data engineering practices, including automated ingestion, scalable ETL pipelines, Lakehouse architecture, and business intelligence reporting.
 
-Technologies Used: Python, PySpark, Fabric (Data Engineering, Data Factory, Power BI)
+---
 
+# 🚀 Solution Architecture
 
-## Project Structure
+<img src="images/End to End Process Diagram.png" alt="Solution Architecture">
 
-[1. Bronze Layer (Raw Data)](https://github.com/Gbemiclassic/Microsoft-Fabric-Data-Engineering-Project/blob/main/1.%20Bronze%20Layer%20Processing.ipynb)
-Purpose: Ingest raw JSON data from an API into the Lakehouse in Microsoft Fabric.
-Method: A Notebook is used to pull the data and store it as a JSON file in the Lakehouse. This raw data acts as the foundation for further processing.
+The architecture consists of:
 
-[2. Silver Layer (Processed Data)](https://github.com/Gbemiclassic/Microsoft-Fabric-Data-Engineering-Project/blob/main/2.%20Silver%20Layer%20Processing.ipynb)
-Purpose: Clean, validate, and transform the raw JSON data into a structured table.
-Method: Another Notebook processes the raw JSON file from the Bronze Layer, converting it into a more usable format, and stores it in a table. This layer ensures the data is ready for analysis by removing errors, handling missing values, and performing initial transformations.
+* API Data Ingestion
+* Bronze Layer (Raw Data)
+* Silver Layer (Cleaned Data)
+* Gold Layer (Business Data)
+* Power BI Reporting
 
-[3. Gold Layer (Reporting-Ready Data)](https://github.com/Gbemiclassic/Microsoft-Fabric-Data-Engineering-Project/blob/main/3.%20Gold%20Layer%20Processing.ipynb)
-Purpose: Further process the Silver Layer data into a format suitable for reporting and analysis.
-Method: A third Notebook processes the data into the final Gold Layer, which contains aggregated and curated data, optimized for Power BI reports.
+---
 
-[4. Power BI Report](https://github.com/Gbemiclassic/Microsoft-Fabric-Data-Engineering-Project/blob/main/Earthquake%20Events%20Report.pbix)
-Purpose: Visualize the final processed data for business analysis and decision-making.
-Method: A Power BI report is created using the Gold Layer data, providing interactive dashboards and insights to the business stakeholders.
+# ⚙️ Technology Stack
 
+| Technology       | Purpose                |
+| ---------------- | ---------------------- |
+| Microsoft Fabric | Data Platform          |
+| Data Factory     | Pipeline Orchestration |
+| Lakehouse        | Data Storage           |
+| OneLake          | Centralized Storage    |
+| PySpark          | Data Processing        |
+| Python           | API Integration        |
+| Power BI         | Visualization          |
+| REST API         | Data Source            |
 
-Data Attribute Definitions
-`id`: A string identifier for each data record.
+---
 
-`latitude`: The latitude of the event, stored as a double.
+# 📂 Project Workflow
 
-`longitude`: The longitude of the event, also stored as a double.
+### 1️⃣ Bronze Layer
 
-`elevation`: The elevation at which the event occurred, expressed in meters, stored as a double.
+Raw earthquake data is extracted directly from the USGS API and stored in the Lakehouse without modification.
 
-`title`: A string representing the title or name of the event.
+<img src="Images/Bronze Layer.png" width="100%">
 
-`place_description`: A string describing the location of the event.
+---
 
-`sig`: A bigint (large integer) representing the significance score of the event.
+### 2️⃣ Silver Layer
 
-`mag`: A double indicating the magnitude of the earthquake.
+Data is cleaned, validated, transformed, and converted into structured tables using PySpark.
 
-`magType`: A string describing the type of magnitude scale used.
+<img src="images/Silver Layer.png" width="100%">
 
-`time`: A timestamp marking the exact time of the event.
+---
 
-`updated`: A timestamp indicating the last update time for the event data.
+### 3️⃣ Gold Layer
 
+Business-ready datasets are created for analytics and reporting.
 
-## Pipeline
+<img src="Images/Gold Layer.png" width="100%">
 
-Here is the image of the pipeline
+---
 
-<img src="Images\Pipeline.jpg" >
+# 🔄 Data Pipeline
 
-## Power BI Report
+The complete ETL process is orchestrated using Microsoft Fabric Data Factory.
 
-Below is the Power BI created from the Gold layer data
+<img src="images/Pipeline.jpg" width="100%">
 
-<img src="Images\Report Screenshot.jpg" >
+Pipeline Highlights:
 
+* Automated execution
+* Notebook orchestration
+* Layer-to-layer transformation
+* End-to-end workflow automation
 
- # <p align="center" style="margin-top: 0px;">Thank you 😎
+---
+
+# 📊 Power BI Dashboard
+
+The Gold Layer powers an interactive dashboard that enables business users to analyze earthquake events efficiently.
+
+<img src="Images/Report Screenshot.jpg" width="100%">
+
+Dashboard Features:
+
+* Earthquake Magnitude Analysis
+* Geographic Distribution
+* Event Timeline
+* Regional Insights
+* Interactive Filtering
+* KPI Monitoring
+
+---
+
+# ⭐ Key Features
+
+* End-to-End Microsoft Fabric Solution
+* REST API Data Integration
+* Medallion Architecture
+* Automated ETL Pipelines
+* PySpark Data Transformation
+* Lakehouse Implementation
+* Power BI Reporting
+* Scalable Enterprise Architecture
+
+---
+
+# 📦 Deliverables
+
+✔ Microsoft Fabric Workspace
+
+✔ Data Factory Pipeline
+
+✔ Bronze / Silver / Gold Lakehouse
+
+✔ PySpark Notebooks
+
+✔ Power BI Dashboard
+
+✔ Project Documentation
+
+---
+
+# 💼 Business Value
+
+This solution demonstrates how Microsoft Fabric can be used to build modern, scalable data platforms capable of ingesting, processing, and analyzing large datasets efficiently. It follows industry best practices and provides a strong foundation for enterprise reporting and data-driven decision-making.
+
+---
+
+# 📬 Let's Connect
+
+If you're looking for a Microsoft Fabric Data Engineer to build scalable ETL pipelines, Lakehouse solutions, or Power BI dashboards, feel free to connect.
+
+⭐ If you found this project helpful, consider giving it a star!
