@@ -1,6 +1,6 @@
 # End-to-End Microsoft Fabric Data Engineering Project
 
-<img src="Images/End to End Process Diagram.png" alt="Project Architecture" width="100%">
+<img src="images/End to End Process Diagram.png" alt="Project Architecture" width="100%">
 
 ## Overview
 
@@ -12,7 +12,7 @@ The project showcases the complete data engineering lifecycle, including API int
 
 ## Project Architecture
 
-<img src="Images/End to End Process Diagram.png" alt="Architecture" width="100%">
+<img src="images/End to End Process Diagram.png" alt="Architecture" width="100%">
 
 The solution follows a Medallion Architecture to ensure scalable and reliable data processing.
 
@@ -50,7 +50,7 @@ The solution follows a Medallion Architecture to ensure scalable and reliable da
 
 ## ETL Pipeline
 
-<img src="Images/Pipeline.jpg" alt="Pipeline" width="100%">
+<img src="images/Pipeline.jpg" alt="Pipeline" width="100%">
 
 The data pipeline is orchestrated using Microsoft Fabric Data Factory.
 
