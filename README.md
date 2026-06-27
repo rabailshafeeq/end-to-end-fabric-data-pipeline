@@ -1,139 +1,128 @@
-# 🌍 End-to-End Microsoft Fabric Data Engineering Project
+# End-to-End Microsoft Fabric Data Engineering Project
 
 <img src="Images/End to End Process Diagram.png" alt="Microsoft Fabric Data Engineering Architecture" width="100%">
 
 ## Overview
 
-This project demonstrates a complete **end-to-end data engineering solution** built with **Microsoft Fabric**. The pipeline ingests real-time earthquake data from the USGS API, processes it through a **Medallion Architecture (Bronze → Silver → Gold)**, and delivers business-ready insights using an interactive **Power BI Dashboard**.
+This project demonstrates an end-to-end data engineering solution built with Microsoft Fabric. The solution ingests real-time earthquake data from the USGS API, processes it through a Medallion Architecture (Bronze, Silver, and Gold), and delivers business-ready insights through an interactive Power BI dashboard.
 
-The solution showcases enterprise-grade data engineering practices, including automated ingestion, scalable ETL pipelines, Lakehouse architecture, and business intelligence reporting.
-
----
-
-# 🚀 Solution Architecture
-
-<img src="images/End to End Process Diagram.png" alt="Solution Architecture">
-
-The architecture consists of:
-
-* API Data Ingestion
-* Bronze Layer (Raw Data)
-* Silver Layer (Cleaned Data)
-* Gold Layer (Business Data)
-* Power BI Reporting
+The project highlights the implementation of modern data engineering practices, including automated data ingestion, scalable ETL pipelines, Lakehouse architecture, and data visualization for reporting and analysis.
 
 ---
 
-# ⚙️ Technology Stack
+## Business Problem
 
-| Technology       | Purpose                |
-| ---------------- | ---------------------- |
-| Microsoft Fabric | Data Platform          |
-| Data Factory     | Pipeline Orchestration |
-| Lakehouse        | Data Storage           |
-| OneLake          | Centralized Storage    |
-| PySpark          | Data Processing        |
-| Python           | API Integration        |
-| Power BI         | Visualization          |
-| REST API         | Data Source            |
+Raw data collected from external APIs is often unstructured and unsuitable for direct reporting. Organizations require an efficient process to ingest, clean, transform, and organize this data before it can be used for analytics and business intelligence.
+
+This project demonstrates how Microsoft Fabric can be used to automate that entire process, creating reliable and reporting-ready datasets.
 
 ---
 
-# 📂 Project Workflow
+## Solution Architecture
 
-### 1️⃣ Bronze Layer
+<img src="Images/End to End Process Diagram.png" alt="Solution Architecture" width="100%">
 
-Raw earthquake data is extracted directly from the USGS API and stored in the Lakehouse without modification.
+The solution follows the Medallion Architecture:
 
-<img src="Images/Bronze Layer.png" width="100%">
-
----
-
-### 2️⃣ Silver Layer
-
-Data is cleaned, validated, transformed, and converted into structured tables using PySpark.
-
-<img src="images/Silver Layer.png" width="100%">
+* **Bronze Layer** – Ingests raw earthquake data from the USGS API into the Lakehouse.
+* **Silver Layer** – Cleans, validates, and transforms the raw data into structured datasets using PySpark.
+* **Gold Layer** – Creates curated datasets optimized for analytics and reporting.
+* **Power BI** – Connects to the Gold Layer to deliver interactive dashboards and business insights.
 
 ---
 
-### 3️⃣ Gold Layer
+## Technology Stack
 
-Business-ready datasets are created for analytics and reporting.
-
-<img src="Images/Gold Layer.png" width="100%">
-
----
-
-# 🔄 Data Pipeline
-
-The complete ETL process is orchestrated using Microsoft Fabric Data Factory.
-
-<img src="images/Pipeline.jpg" width="100%">
-
-Pipeline Highlights:
-
-* Automated execution
-* Notebook orchestration
-* Layer-to-layer transformation
-* End-to-end workflow automation
+| Technology       | Purpose                             |
+| ---------------- | ----------------------------------- |
+| Microsoft Fabric | End-to-end data platform            |
+| Data Factory     | Pipeline orchestration              |
+| Lakehouse        | Data storage                        |
+| OneLake          | Centralized data management         |
+| Python           | API integration                     |
+| PySpark          | Data transformation                 |
+| Power BI         | Business intelligence and reporting |
+| REST API         | Data source                         |
 
 ---
 
-# 📊 Power BI Dashboard
+## Data Engineering Workflow
 
-The Gold Layer powers an interactive dashboard that enables business users to analyze earthquake events efficiently.
+The project follows a three-layer Medallion Architecture:
 
-<img src="Images/Report Screenshot.jpg" width="100%">
+### Bronze Layer
 
-Dashboard Features:
+* Extracts earthquake event data from the USGS API.
+* Stores raw JSON data in the Lakehouse.
+* Preserves the original source data for future processing.
 
-* Earthquake Magnitude Analysis
-* Geographic Distribution
-* Event Timeline
-* Regional Insights
-* Interactive Filtering
-* KPI Monitoring
+### Silver Layer
 
----
+* Cleans and validates incoming records.
+* Handles missing values and inconsistent data.
+* Converts raw JSON into structured tables using PySpark.
 
-# ⭐ Key Features
+### Gold Layer
 
-* End-to-End Microsoft Fabric Solution
-* REST API Data Integration
-* Medallion Architecture
-* Automated ETL Pipelines
-* PySpark Data Transformation
-* Lakehouse Implementation
-* Power BI Reporting
-* Scalable Enterprise Architecture
+* Creates business-ready datasets.
+* Optimizes data for reporting and analytics.
+* Serves as the source for Power BI dashboards.
 
 ---
 
-# 📦 Deliverables
+## Data Pipeline
 
-✔ Microsoft Fabric Workspace
+<img src="Images/Pipeline.jpg" alt="Microsoft Fabric Pipeline" width="100%">
 
-✔ Data Factory Pipeline
-
-✔ Bronze / Silver / Gold Lakehouse
-
-✔ PySpark Notebooks
-
-✔ Power BI Dashboard
-
-✔ Project Documentation
+The ETL workflow is orchestrated using Microsoft Fabric Data Factory. The pipeline automates data ingestion, executes transformation notebooks, and loads processed datasets into the Gold Layer, enabling a reliable and repeatable data processing workflow.
 
 ---
 
-# 💼 Business Value
+## Power BI Dashboard
 
-This solution demonstrates how Microsoft Fabric can be used to build modern, scalable data platforms capable of ingesting, processing, and analyzing large datasets efficiently. It follows industry best practices and provides a strong foundation for enterprise reporting and data-driven decision-making.
+<img src="Images/Report Screenshot.jpg" alt="Power BI Dashboard" width="100%">
+
+The dashboard provides interactive insights into earthquake activity, allowing users to analyze:
+
+* Earthquake magnitude trends
+* Geographic distribution of events
+* Event locations
+* Time-based analysis
+* Key performance indicators
+* Interactive filtering and exploration
 
 ---
 
-# 📬 Let's Connect
+## Key Features
 
-If you're looking for a Microsoft Fabric Data Engineer to build scalable ETL pipelines, Lakehouse solutions, or Power BI dashboards, feel free to connect.
+* End-to-end Microsoft Fabric implementation
+* Automated ETL pipeline
+* REST API integration
+* Medallion Architecture (Bronze, Silver, Gold)
+* Lakehouse-based data storage
+* PySpark data transformation
+* Interactive Power BI reporting
+* Scalable and production-ready architecture
 
-⭐ If you found this project helpful, consider giving it a star!
+---
+
+## Deliverables
+
+* Microsoft Fabric Workspace
+* Data Factory Pipeline
+* Bronze, Silver, and Gold Lakehouse Layers
+* PySpark Notebooks
+* Interactive Power BI Dashboard
+* Project Documentation
+
+---
+
+## Business Value
+
+This project demonstrates how Microsoft Fabric can be used to build scalable, cloud-based data engineering solutions that transform raw API data into actionable business insights. The architecture is designed to support efficient data processing, reliable reporting, and informed decision-making.
+
+---
+
+## About This Project
+
+This repository is part of my data engineering portfolio and demonstrates my experience with Microsoft Fabric, ETL pipeline development, Lakehouse architecture, PySpark data transformation, REST API integration, and Power BI dashboard development. It reflects the type of end-to-end data engineering solutions I can deliver for businesses seeking modern analytics platforms.
