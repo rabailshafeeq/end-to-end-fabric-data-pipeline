@@ -66,7 +66,7 @@ The workflow automatically:
 
 ## Power BI Dashboard
 
-<img src="Images/Report Screenshot.jpg" alt="Dashboard" width="100%">
+<img src="images/Report Screenshot.jpg" alt="Dashboard" width="100%">
 
 The dashboard provides interactive insights into earthquake activity, including:
 
