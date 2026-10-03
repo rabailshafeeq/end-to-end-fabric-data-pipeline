@@ -1,5 +1,11 @@
 # End-to-End Microsoft Fabric Data Engineering Project
 
+**In one line:** A Microsoft Fabric pipeline that ingests earthquake data from the USGS API, transforms it with PySpark through Bronze, Silver and Gold layers, and serves it to a Power BI report.
+
+**Skills demonstrated:** Microsoft Fabric, Data Factory, Lakehouse, PySpark, Medallion architecture, REST API ingestion, Power BI.
+
+**Repo contents:** three notebooks (Bronze, Silver and Gold layer processing) and the Power BI report file (Earthquake Events Report.pbix).
+
 <img src="images/End to End Process Diagram.png" alt="Project Architecture" width="100%">
 
 ## Overview
@@ -88,14 +94,14 @@ The dashboard provides interactive insights into earthquake activity, including:
 - Lakehouse implementation
 - PySpark data transformation
 - Interactive Power BI dashboard
-- Enterprise-ready data engineering workflow
+- Notebook-based, reproducible workflow
 
 ---
 
 
 ## Business Value
 
-This project demonstrates how Microsoft Fabric can be used to build a modern cloud-based data platform that transforms raw API data into reliable, analytics-ready datasets. The solution follows industry-standard data engineering practices and provides a scalable foundation for reporting and decision-making.
+This project demonstrates how Microsoft Fabric can be used to build a modern cloud-based data platform that transforms raw API data into reliable, analytics-ready datasets. The solution follows the Medallion architecture pattern and provides a scalable foundation for reporting and decision-making.
 
 ---
 
